@@ -1,0 +1,30 @@
+{
+  "name": "chi-travis",
+  "version": "1.0.0",
+  "description": "lab 07 nodejs-npm-express",
+  "main": "server.js",
+  "scripts": {
+    "test": "(https://github.com/ZhenChiX/07-nodejs-npm-express)",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhenChiX/07-nodejs-npm-express.git"
+  },
+  "keywords": [
+    "nodejs",
+    "lab07",
+    "npm",
+    "server",
+    "back-end"
+  ],
+  "author": "Chi,Travis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhenChiX/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/ZhenChiX/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
