@@ -12,10 +12,15 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/articles', (request, response) => {
-  // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
-  console.log(request.body);
-  response.status(201).json(request.body);
+ // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
+ console.log(request.body);
+ response.status(201).json(request.body);
 });
 
+app.get('/newpost', (request, response) => {
+ response.sendFile('public/new.html', {root: '.'});
+});
+
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
