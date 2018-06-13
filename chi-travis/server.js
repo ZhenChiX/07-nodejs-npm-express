@@ -17,5 +17,20 @@ app.post('/articles', (request, response) => {
   response.status(201).json(request.body);
 });
 
+app.get('/newpost', (request, response) => {
+  response.sendFile('public/new.html', {root: '.'});
+});
+
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+
+app.get('/newpost', (request, response) => {
+  response.sendFile('public/new.html', {root: '.'});
+});
+
+//This will then dispatch the 404 status and 404.html
+app.use((request, response, next) => {
+  reponse.send("I pity the fool who 404s");
+  response.status(404).sendFile('404.html', { root: './public' });
+});
