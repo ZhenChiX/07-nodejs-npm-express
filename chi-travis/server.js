@@ -31,7 +31,7 @@ app.get('/newpost', (request, response) => {
 
 //This will then dispatch the 404 status and 404.html
 app.use((request, response, next) => {
-  reponse.send("I pity the fool who 404s");
+  response.send("I pity the fool who 404s");
   response.status(404).sendFile('404.html', { root: './public' });
 });
 
